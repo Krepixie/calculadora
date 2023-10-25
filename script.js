@@ -39,3 +39,18 @@ function mostrarTabuada() {
   }
   tabuada.innerHTML = resposta;
 }
+
+
+//lista de alunos
+const alunos = ['Bianca', 'Milena', 'Heloyse', 'Lucas', 'Luana'];
+let lista = "";
+function mostrarLista(){
+  let i = 0;
+
+  while(i < alunos.length){
+    lista += `<li>${alunos[i]}</li>`;
+    i++;
+  };
+
+  document.getElementById('lista').innerHTML= lista;
+};
