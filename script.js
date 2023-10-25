@@ -54,3 +54,26 @@ function mostrarLista(){
 
   document.getElementById('lista').innerHTML= lista;
 };
+
+//formulario
+
+const form = document.getElementById('meuForm');
+const resultadoForm = document.getElementById('resultadoForm');
+const aluno = {
+  nome: "",
+  idade: "",
+  curso: "",
+  exibirInfo: function(texto){
+    this.nome = form.nome.value;
+    this.idade = form.idade.value;
+    this.curso = form.curso.value;
+
+    resultadoForm.textContent = `${texto}: ${this.nome} - Idade: ${this.idade} - Curso: ${this.curso}`
+    return 'Cadastro efetuado com sucesso!'
+  }
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  alert(aluno.exibirInfo("Nome do aluno"));
+})
